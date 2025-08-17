@@ -48,6 +48,17 @@ export default function ShortsFeed() {
             height={height}
             width={"100%"}
             play={playingIndex === index}
+            mute={true}
+            showFullscreenButton={false}
+            initialPlayerParams={{
+              controls: false,          // hides controls
+              modestbranding: true,     // minimal YouTube branding
+              rel: false,               // disable related videos at end
+              fs: false,                // hides the full-screen button
+            }}
+            webViewProps={{
+              allowsInlineMediaPlayback: true,
+            }}
             // Optionally, add controls={false} to hide controls if desired
           />
           <View style={styles.overlay}>
